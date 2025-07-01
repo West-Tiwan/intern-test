@@ -12,8 +12,8 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center">
       <div className="flex w-full min-h-screen">
-        {/* Left Side - Background Image */}
-        <div className="relative w-1/2 overflow-hidden">
+        {/* Left Side - Background Image (Hidden on mobile) */}
+        <div className="relative w-1/2 overflow-hidden hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-emerald-900/30 z-10"></div>
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat will-change-transform"
@@ -24,27 +24,27 @@ const Hero = () => {
           />
         </div>
 
-        {/* Right Side - Content */}
-        <div className="w-1/2 bg-gradient-to-br from-emerald-800 to-emerald-900 flex items-center">
-          <div className="max-w-2xl mx-auto px-8 lg:px-12">
-            <div className="text-left">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+        {/* Right Side - Content (Full width on mobile) */}
+        <div className="w-full md:w-1/2 bg-gradient-to-br from-emerald-800 to-emerald-900 flex items-center">
+          <div className="max-w-2xl mx-auto px-6 sm:px-8 lg:px-12 py-8 md:py-0">
+            <div className="text-center md:text-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-4 sm:mb-6 leading-tight">
                 Professional Counseling for Healing and Growth
               </h1>
-              <h2 className="text-lg md:text-xl text-emerald-100 mb-8 leading-relaxed">
+              <h2 className="text-base sm:text-lg md:text-xl text-emerald-100 mb-6 sm:mb-8 leading-relaxed">
                 Find peace, overcome challenges, and build stronger relationships with compassionate, 
                 evidence-based therapy in Los Angeles.
               </h2>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
                 <a
                   href="#contact"
-                  className="bg-white hover:bg-emerald-100 text-emerald-800 font-semibold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="bg-white hover:bg-emerald-100 text-emerald-800 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-300 text-center text-sm sm:text-base"
                 >
                   Book a Free Consult
                 </a>
                 <a
                   href="#about"
-                  className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-semibold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-colors duration-300 text-center text-sm sm:text-base"
                 >
                   Learn More
                 </a>
@@ -57,9 +57,9 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
         <div className="animate-bounce">
-          <div className="relative flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full">
+          <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-full">
             <svg
-              className="w-6 h-6 text-white"
+              className="w-5 h-5 sm:w-6 sm:h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

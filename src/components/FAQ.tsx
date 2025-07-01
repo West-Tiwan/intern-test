@@ -23,20 +23,20 @@ const FAQ = () => {
   }
 
   return (
-    <section id="faq" className="section-padding bg-gray-50">
+    <section id="faq" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 sm:mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600">
             Common questions about therapy sessions and my practice
           </p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -44,14 +44,14 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-4 sm:px-6 py-4 sm:py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-8">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-4 sm:pr-8">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-6 h-6 text-emerald-700 transform transition-transform duration-200 ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 text-emerald-700 transform transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -73,8 +73,8 @@ const FAQ = () => {
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6">
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {faq.answer}
                   </p>
                 </div>
@@ -84,17 +84,17 @@ const FAQ = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 bg-sage-50 rounded-lg p-8 text-center">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+        <div className="mt-8 sm:mt-12 bg-sage-50 rounded-lg p-6 sm:p-8 text-center">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
             Have More Questions?
           </h3>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base">
             I'm here to help. Feel free to reach out with any questions about therapy, 
             my approach, or how we can work together.
           </p>
           <a
             href="#contact"
-            className="btn-primary"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors duration-300 inline-block text-sm sm:text-base"
           >
             Get In Touch
           </a>

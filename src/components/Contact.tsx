@@ -113,23 +113,23 @@ const Contact = () => {
 
   if (isSubmitted) {
     return (
-      <section id="contact" className="section-padding bg-sage-50">
+      <section id="contact" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-sage-50">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white rounded-lg shadow-lg p-12">
-            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-white rounded-lg shadow-lg p-8 sm:p-12">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mb-3 sm:mb-4">
               Thank You!
             </h2>
-            <p className="text-xl text-gray-600 mb-6">
+            <p className="text-lg sm:text-xl text-gray-600 mb-4 sm:mb-6">
               Your message has been received. I'll get back to you within one business day.
             </p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="btn-secondary"
+              className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors duration-300 text-sm sm:text-base"
             >
               Send Another Message
             </button>
@@ -140,68 +140,68 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section-padding bg-sage-50">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-sage-50">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4 sm:mb-6 text-center lg:text-left">
               Get In Touch
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 text-center lg:text-left">
               Ready to begin your journey toward healing and growth? I'm here to help. 
               Reach out to schedule your free consultation.
             </p>
 
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+              <div className="flex items-start justify-center lg:justify-start">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <div className="flex flex-1 flex-col justify-items-start items-start">
-                  <h3 className="font-semibold text-gray-900 mb-1">Office Location</h3>
+                <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
+                  <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Office Location</h3>
                   <a 
                     href="https://maps.google.com/?q=1287+Maplewood+Drive,+Los+Angeles,+CA+90026"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer"
+                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer text-sm sm:text-base text-center lg:text-left"
                   >
                     1287 Maplewood Drive, Los Angeles, CA 90026
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start justify-center lg:justify-start">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <div className="flex flex-1 flex-col justify-items-start items-start">
-                  <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
+                <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
+                  <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Phone</h3>
                   <a 
                     href="tel:+13235550192"
-                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer"
+                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer text-sm sm:text-base"
                   >
                     (323) 555-0192
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-12 h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start justify-center lg:justify-start">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 text-emerald-700 bg-emerald-100 rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div className="flex flex-1 flex-col justify-items-start items-start">
-                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
+                  <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Email</h3>
                   <a 
                     href="mailto:serena@blakepsychology.com?subject=Therapy Consultation Request"
-                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer"
+                    className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer text-sm sm:text-base break-all sm:break-normal text-center lg:text-left"
                   >
                     serena@blakepsychology.com
                   </a>
@@ -209,9 +209,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <h3 className="font-semibold text-gray-900 mb-4">Office Hours</h3>
-              <div className="space-y-2 text-gray-600">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+              <h3 className="font-semibold text-gray-900 mb-3 sm:mb-4 text-center lg:text-left text-sm sm:text-base">Office Hours</h3>
+              <div className="space-y-2 text-gray-600 text-sm sm:text-base">
                 <div className="flex justify-between">
                   <span>In-person:</span>
                   <span>Tue & Thu, 10 AM–6 PM</span>
@@ -225,12 +225,12 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-serif font-bold text-gray-900 mb-6">
+          <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-4 sm:mb-6 text-center lg:text-left">
               Send Me a Message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
@@ -241,7 +241,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
                     errors.name ? 'border-emerald-500' : 'border-gray-300'
                   }`}
                   placeholder="Your full name"
@@ -259,7 +259,7 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
                     errors.phone ? 'border-emerald-500' : 'border-gray-300'
                   }`}
                   placeholder="(555) 123-4567"
@@ -277,7 +277,7 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
                     errors.email ? 'border-emerald-500' : 'border-gray-300'
                   }`}
                   placeholder="your.email@example.com"
@@ -295,7 +295,7 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-vertical ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-vertical text-sm sm:text-base ${
                     errors.message ? 'border-emerald-500' : 'border-gray-300'
                   }`}
                   placeholder="Tell me a bit about what you're looking for and how I can help..."
@@ -313,7 +313,7 @@ const Contact = () => {
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
                     errors.preferredTime ? 'border-emerald-500' : 'border-gray-300'
                   }`}
                   placeholder="e.g., Weekday mornings, Tuesday afternoons, etc."
@@ -341,7 +341,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-semibold transition-colors duration-300 ${
+                className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-colors duration-300 text-sm sm:text-base ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-emerald-700 hover:bg-emerald-800 text-white'
