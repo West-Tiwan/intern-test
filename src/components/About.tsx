@@ -9,7 +9,7 @@ const About = () => {
               <img
                 src="https://img.freepik.com/free-photo/portrait-young-businesswoman-holding-eyeglasses-hand-against-gray-backdrop_23-2148029483.jpg"
                 alt="Dr. Serena Blake"
-                className="w-full h-64 sm:h-80 lg:h-[600px] object-cover rounded-lg shadow-lg"
+                className="w-full h-120 lg:h-[600px] object-cover rounded-lg shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-sage-900/20 to-transparent rounded-lg"></div>
             </div>
