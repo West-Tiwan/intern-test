@@ -70,17 +70,17 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    
+
     if (!validateForm()) {
       return
     }
 
     setIsSubmitting(true)
     setIsSubmitted(true)
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
-    
+
     // Reset form after successful submission
     setFormData({
       name: '',
@@ -148,7 +148,7 @@ const Contact = () => {
               Get In Touch
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 text-center lg:text-left">
-              Ready to begin your journey toward healing and growth? I'm here to help. 
+              Ready to begin your journey toward healing and growth? I'm here to help.
               Reach out to schedule your free consultation.
             </p>
 
@@ -162,7 +162,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
                   <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base text-center lg:text-left">Office Location</h3>
-                  <a 
+                  <a
                     href="https://maps.google.com/?q=1287+Maplewood+Drive,+Los+Angeles,+CA+90026"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -181,7 +181,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
                   <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base text-center lg:text-left">Phone</h3>
-                  <a 
+                  <a
                     href="tel:+13235550192"
                     className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer text-sm sm:text-base text-center lg:text-left"
                   >
@@ -198,7 +198,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-1 flex-col justify-items-start items-center lg:items-start">
                   <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base text-center lg:text-left">Email</h3>
-                  <a 
+                  <a
                     href="mailto:serena@blakepsychology.com?subject=Therapy Consultation Request"
                     className="text-gray-600 hover:text-emerald-600 transition-colors cursor-pointer text-sm sm:text-base break-all sm:break-normal text-center lg:text-left"
                   >
@@ -228,10 +228,10 @@ const Contact = () => {
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-4 sm:mb-6 text-center lg:text-left">
               Send Me a Message
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 text-left">
                   Name *
                 </label>
                 <input
@@ -240,16 +240,15 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
-                    errors.name ? 'border-emerald-500' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${errors.name ? 'border-emerald-500' : 'border-gray-300'
+                    }`}
                   placeholder="Your full name"
                 />
-                {errors.name && <p className="mt-1 text-sm text-gray-600">{errors.name}</p>}
+                {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2 text-left">
                   Phone *
                 </label>
                 <input
@@ -258,16 +257,15 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
-                    errors.phone ? 'border-emerald-500' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${errors.phone ? 'border-emerald-500' : 'border-gray-300'
+                    }`}
                   placeholder="(555) 123-4567"
                 />
-                {errors.phone && <p className="mt-1 text-sm text-gray-600">{errors.phone}</p>}
+                {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2 text-left">
                   Email *
                 </label>
                 <input
@@ -276,16 +274,15 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
-                    errors.email ? 'border-emerald-500' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${errors.email ? 'border-emerald-500' : 'border-gray-300'
+                    }`}
                   placeholder="your.email@example.com"
                 />
-                {errors.email && <p className="mt-1 text-sm text-gray-600">{errors.email}</p>}
+                {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2 text-left">
                   What brings you here? *
                 </label>
                 <textarea
@@ -294,16 +291,15 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-vertical text-sm sm:text-base ${
-                    errors.message ? 'border-emerald-500' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-vertical text-sm sm:text-base ${errors.message ? 'border-emerald-500' : 'border-gray-300'
+                    }`}
                   placeholder="Tell me a bit about what you're looking for and how I can help..."
                 />
-                {errors.message && <p className="mt-1 text-sm text-gray-600">{errors.message}</p>}
+                {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>
 
               <div>
-                <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2 text-left">
                   Preferred time to reach you *
                 </label>
                 <input
@@ -312,12 +308,11 @@ const Contact = () => {
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${
-                    errors.preferredTime ? 'border-emerald-500' : 'border-gray-300'
-                  }`}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors text-sm sm:text-base ${errors.preferredTime ? 'border-emerald-500' : 'border-gray-300'
+                    }`}
                   placeholder="e.g., Weekday mornings, Tuesday afternoons, etc."
                 />
-                {errors.preferredTime && <p className="mt-1 text-sm text-gray-600">{errors.preferredTime}</p>}
+                {errors.preferredTime && <p className="mt-1 text-sm text-red-600">{errors.preferredTime}</p>}
               </div>
 
               <div className="flex items-start">
@@ -327,24 +322,22 @@ const Contact = () => {
                   name="agreeToContact"
                   checked={formData.agreeToContact}
                   onChange={handleChange}
-                  className={`mt-0.5 h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded ${
-                    errors.agreeToContact ? 'border-emerald-500' : ''
-                  }`}
+                  className={`mt-0.5 h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded ${errors.agreeToContact ? 'border-emerald-500' : ''
+                    }`}
                 />
                 <label htmlFor="agreeToContact" className="ml-3 text-sm text-gray-700">
                   I agree to be contacted via phone or email to schedule a consultation *
                 </label>
               </div>
-              {errors.agreeToContact && <p className="text-sm text-gray-600">{errors.agreeToContact}</p>}
+              {errors.agreeToContact && <p className="text-sm text-red-600">{errors.agreeToContact}</p>}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-colors duration-300 text-sm sm:text-base ${
-                  isSubmitting
+                className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-colors duration-300 text-sm sm:text-base ${isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-emerald-700 hover:bg-emerald-800 text-white'
-                }`}
+                  }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
